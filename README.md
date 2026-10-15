@@ -51,15 +51,6 @@ data/
 
 Open `English.ipynb` from the project root and run the desired model sections in order after shared preprocessing and function definitions. The notebooks create `train/`, `test/` and `splitted_data/` automatically. Pretrained weights require internet access; training is substantially faster with a compatible GPU. No trained checkpoint is included.
 
-## Reproduction notes
-
-These are preserved coursework notebooks, not a packaged web application. Dependencies are unpinned because the original environment versions were not supplied. A full training run has not been verified for this repository.
-
-- `random_submission.csv` contains placeholder predictions, not verified ground-truth test labels. Test metrics calculated from those labels must not be treated as real test performance; use the validation split for evaluation.
-- `Chinese.ipynb` calls `torch.cuda.init()` unconditionally; skip that line on a machine without CUDA.
-- The submission export in the notebooks parses Windows path separators. On other operating systems use `pathlib.Path(image_path).stem` for image IDs.
-- Keep the label mapping above when exporting predictions; alphabetical `ImageFolder` indices can differ.
-- Some original comments have encoding artifacts; their source text is preserved.
 
 ## 中文说明
 
